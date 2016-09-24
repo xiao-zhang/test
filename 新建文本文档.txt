@@ -1,0 +1,38 @@
+<#if zytbAreaPriceOfflineList?? && zytbAreaPriceOfflineList?has_content>
+<#global a = 0>
+<#list zytbAreaPriceOfflineList as zytbAreaPriceOffline>
+<#assign a=a+1>
+<div class="initialFuwuPlan">
+<#if a == 1>
+
+<#if zytbAreaPriceOffline??> value="${zytbAreaPriceOffline.area}" </#if>
+
+<#if zytbAreaPriceOffline??><#if (zytbAreaPriceOffline.area)?contains("西藏")> checked </#if></#if> 
+
+<#if zytbAreaPriceOffline??> value="${zytbAreaPriceOffline.price?string("0.##")}" </#if> 
+
+<#if zytbAreaPriceOffline??> <#if zytbAreaPriceOffline.consultTime=="all"> selected = "selected" </#if> </#if>
+
+<#if zytbAreaPriceOffline??> <#if zytbAreaPriceOffline.consultTime=="workday"> selected = "selected" </#if></#if>
+
+<#if a == 1>
+<a href='javascript:void(0)' class='add_area'>添加区域</a>
+<a href='javascript:void(0)' class='tiaokuan'>服务条款</a>
+<#else>
+<a href='javascript:void(0)' class='de-area'>删除</a>
+</#if>
+</div>
+</#list>
+
+<#else>
+
+
+</#if>
+
+文本框的模糊搜索
+网站的全文搜索
+在某个页面登录或注册后应该在跳转到该页面
+视频的缩略图修改
+验证码的bug
+视频的元数据放在第一帧
+个人中心的订单管理
